@@ -26,3 +26,13 @@ var dateStr = date.toDateString(); // dateStr == 1/7/2020
 var timeStr = date.toLocaleDateString(); // timeStr == 1:54:23 pm
 
 document.getElementById("dateNow").innerHTML = dateStr + "<br/>" + timeStr;
+
+var daysLeft = 365 - date.getDate();
+var hrsLeft = 24 - date.getHours();
+var minsLeft = 60 - date.getMinutes();
+var secsLeft = 60 - date.getSeconds();
+
+document.getElementById("days").textContent = daysLeft;
+document.getElementById("hrs").textContent = hrsLeft;
+document.getElementById("mins").textContent = minsLeft;
+document.getElementById("secs").textContent = secsLeft;
