@@ -11,6 +11,8 @@
 
 */
 runClock();
+setInterval("runClock()", 100);
+runClock();
 
 function runClock()
 {
@@ -18,7 +20,7 @@ function runClock()
    var currentYear = new Date();
 
    var dateStr = currentYear.toDateString(); // dateStr == 1/7/2020
-   var timeStr = currentYear.toLocaleDateString(); // timeStr == 1:54:23 pm
+   var timeStr = currentYear.toLocaleTimeString(); // timeStr == 1:54:23 pm
 
    document.getElementById("dateNow").innerHTML = dateStr + "<br/>" + timeStr;
 
@@ -49,3 +51,23 @@ function distance(x1, y1, x2, y2){
 }
 
 console.log(distance(1,1,4,5)); //5
+
+
+var height = Math.ceil(Math.random()*10);
+var length = Math.ceil(Math.random()*10);
+var testHeight = height;
+var testLength = length;
+
+function solver(){
+   var height = Math.ceil(Math.random()*10);
+   var length = Math.ceil(Math.random()*10);
+
+   var area = height * length;
+   console.log("The height is " + height +  " and the length is " + length + " therefore the area is " + area);
+}
+
+setInterval("solver()", 1000);
+
+
+
+
